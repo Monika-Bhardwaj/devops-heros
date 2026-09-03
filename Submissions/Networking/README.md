@@ -141,7 +141,7 @@ All commands were executed directly on Monika's Ubuntu laptop to understand OSI 
 ## Screenshot Evidence
 
 ### 1. Ping and Network Interface Verification
-![Ping and IP Address](<../Screenshots/Networking_Fundamentals/ping_and_ip_addr.png>)
+![Ping and IP Address](<../../Screenshots/Networking_Fundamentals/ping_and_ip_addr.png>)
 
 ### 2. Routes, DNS, HTTP Headers, and Tracepath
-![Routing, DNS, Curl, Tracepath](<../Screenshots/Networking_Fundamentals/routes_ports_dns_curl.png>)
+![Routing, DNS, Curl, Tracepath](<../../Screenshots/Networking_Fundamentals/routes_ports_dns_curl.png>)

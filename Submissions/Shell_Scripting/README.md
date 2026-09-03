@@ -176,4 +176,4 @@ ls -lh monika_sysinfo/processes.txt
 ---
 
 ## Screenshot Evidence: Script Execution
-![Shell Script Execution on Laptop](<../Screenshots/Shell_Scripting/system_info_execution.png>)
+![Shell Script Execution on Laptop](<../../Screenshots/Shell_Scripting/system_info_execution.png>)

@@ -73,7 +73,7 @@ cat hardlink.txt  # Result: Hello Linux - Monika ASUS Laptop (data preserved!)
 ```
 
 ### Screenshot Evidence: Soft and Hard Link Verification
-![Soft and Hard Links Verification](<../Screenshots/Linux_Fundamentals/soft_and_hard_links.png>)
+![Soft and Hard Links Verification](<../../Screenshots/Linux_Fundamentals/soft_and_hard_links.png>)
 
 ### Interview Question & Answer
 **Q: How does Linux handle file deletion when both soft links and hard links exist?**  
@@ -108,7 +108,7 @@ id moneca
 ```
 
 ### Screenshot Evidence: `adduser` vs `useradd`
-![adduser vs useradd](<../Screenshots/Linux_Fundamentals/adduser_vs_useradd.png>)
+![adduser vs useradd](<../../Screenshots/Linux_Fundamentals/adduser_vs_useradd.png>)
 
 ---
 
@@ -132,7 +132,7 @@ journalctl -u NetworkManager -n 6 --no-pager
 ```
 
 ### Screenshot Evidence: `journalctl` Service Logs
-![journalctl Service Logs](<../Screenshots/Linux_Fundamentals/journalctl_service_logs.png>)
+![journalctl Service Logs](<../../Screenshots/Linux_Fundamentals/journalctl_service_logs.png>)
 
 ---
 
@@ -158,4 +158,4 @@ pwd && whoami && uname -sr && free -h && df -h /
 ```
 
 ### Screenshot Evidence: Linux Cheat Sheet Execution
-![Linux Cheat Sheet](<../Screenshots/Linux_Fundamentals/linux_cheat_sheet_commands.png>)
+![Linux Cheat Sheet](<../../Screenshots/Linux_Fundamentals/linux_cheat_sheet_commands.png>)

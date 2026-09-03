@@ -70,7 +70,7 @@ session6-7-docker/
   # Output: Hello World from Node.js!
   ```
 - **Browser Screenshot**:
-  ![Node.js Web Output](<../Screenshots/Docker_Fundamentals/nodejs_browser.png>)
+  ![Node.js Web Output](<../../Screenshots/Docker_Fundamentals/nodejs_browser.png>)
 
 ---
 
@@ -89,7 +89,7 @@ session6-7-docker/
   # Output: Hello World from Python!
   ```
 - **Browser Screenshot**:
-  ![Python Web Output](<../Screenshots/Docker_Fundamentals/python_browser.png>)
+  ![Python Web Output](<../../Screenshots/Docker_Fundamentals/python_browser.png>)
 
 ---
 
@@ -108,7 +108,7 @@ session6-7-docker/
   # Output: Hello World from Java!
   ```
 - **Browser Screenshot**:
-  ![Java Web Output](<../Screenshots/Docker_Fundamentals/java_browser.png>)
+  ![Java Web Output](<../../Screenshots/Docker_Fundamentals/java_browser.png>)
 
 ---
 
@@ -127,7 +127,7 @@ session6-7-docker/
   # Output: <h1>Hello World from Apache!</h1>
   ```
 - **Browser Screenshot**:
-  ![Apache Web Output](<../Screenshots/Docker_Fundamentals/apache_browser.png>)
+  ![Apache Web Output](<../../Screenshots/Docker_Fundamentals/apache_browser.png>)
 
 ---
 
@@ -146,7 +146,7 @@ session6-7-docker/
   # Output: <h1>Hello World from Nginx!</h1>
   ```
 - **Browser Screenshot**:
-  ![Nginx Web Output](<../Screenshots/Docker_Fundamentals/nginx_browser.png>)
+  ![Nginx Web Output](<../../Screenshots/Docker_Fundamentals/nginx_browser.png>)
 
 ---
 
@@ -159,9 +159,9 @@ session6-7-docker/
   # Output: <h1>Hello World from React!</h1>
   ```
 - **Browser Screenshot**:
-  ![React Web Output](<../Screenshots/Docker_Fundamentals/react_browser.png>)
+  ![React Web Output](<../../Screenshots/Docker_Fundamentals/react_browser.png>)
 
 ---
 
 ## Screenshot Evidence: Running Containers (`docker ps`)
-![Running Docker Containers](<../Screenshots/Docker_Fundamentals/docker_apps_build_and_ps.png>)
+![Running Docker Containers](<../../Screenshots/Docker_Fundamentals/docker_apps_build_and_ps.png>)

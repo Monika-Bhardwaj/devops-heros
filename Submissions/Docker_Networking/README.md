@@ -59,7 +59,7 @@ ping: bad address 'database-c'
 *(Confirms that `database-c` is completely isolated on `db-net` and cannot be reached or resolved by `frontend-c`)*.
 
 ### Screenshot Evidence: Container Networking & Isolation
-![Container Networking Verification](<../Screenshots/Docker_Network/docker_container_networking.png>)
+![Container Networking Verification](<../../Screenshots/Docker_Network/docker_container_networking.png>)
 
 ---
 
@@ -109,7 +109,7 @@ A **bind mount** maps an exact directory or file path from the host machine dire
    **Verification Result**: Immediate reflection of changes confirmed without container restart!
 
 ### Screenshot Evidence: Bind Mount Live Update
-![Bind Mount Live Update](<../Screenshots/Docker_Network/docker_bind_mount_live_update.png>)
+![Bind Mount Live Update](<../../Screenshots/Docker_Network/docker_bind_mount_live_update.png>)
 
 ---
 

@@ -28,7 +28,7 @@
    - **Observed Result**: Git automatically staged `tracked_file.txt` and committed it (`[main 47bb83b]`), while leaving `untracked_file.txt` intact as untracked (`?? untracked_file.txt`).
 
 ### Screenshot Evidence: Git Commit Comparison
-![Git Commit -a -m Comparison](<../Screenshots/Git_GitHub/git_commit_comparison.png>)
+![Git Commit -a -m Comparison](<../../Screenshots/Git_GitHub/git_commit_comparison.png>)
 
 ---
 
@@ -69,4 +69,4 @@
    `git log --oneline -n 3` confirmed that `feature_b.txt` is now available directly on `main` with new commit hash `c694f8a`, while preserving commit history cleanly!
 
 ### Screenshot Evidence: Git Cherry-Pick Workflow
-![Git Cherry Pick Workflow](<../Screenshots/Git_GitHub/git_cherry_pick_workflow.png>)
+![Git Cherry Pick Workflow](<../../Screenshots/Git_GitHub/git_cherry_pick_workflow.png>)
