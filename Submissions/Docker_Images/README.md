@@ -1,125 +1,104 @@
-# Docker Multi-Stage Build & Images Homework Solutions
+# Docker Multi-Stage Build & Images Homework Tasks & Lab Report
 
 ### Student Details
 | Field | Value |
 |---|---|
 | **Name** | Monika |
-| **Email** | monika.24bcs10333@sst.scaler.com |
-| **Enrollment Number** | 10333 (24bcs10333) |
+| **Email** | [monika.24bcs10333@sst.scaler.com](mailto:monika.24bcs10333@sst.scaler.com) |
+| **Enrollment Number** | 10333 (`24bcs10333`) |
+| **Host System** | Ubuntu Linux 24.04 (`moneca-VivoBook-ASUSLaptop-X515JA-X515JA`), Docker Desktop Engine |
 | **Repository** | [Monika-Bhardwaj/devops-heros](https://github.com/Monika-Bhardwaj/devops-heros) |
 
 ---
 
 ## Task 1: Run Multi-Stage Dockerfile
 
-### What is Multi-Stage Build?
+### What is a Multi-Stage Build?
+A **multi-stage build** is a Docker optimization technique where multiple `FROM` instructions are defined within a single `Dockerfile`. Each stage can use a distinct base image and selectively copy only the compiled artifacts and production dependencies from earlier stages.
+- **Benefits**:
+  - Eliminates build tools, compilers, development dependencies, and package managers from the final image.
+  - Substantially decreases image attack surface and vulnerability count.
+  - Drastically shrinks final image size for faster network pulls and deployments.
 
-Multi-stage builds allow you to use multiple `FROM` statements in a single Dockerfile. Each stage can use a different base image, and you can selectively copy artifacts from one stage to another. This results in smaller, more efficient production images.
+### Multi-Stage Dockerfile Analysis
+```dockerfile
+# -------------------------
+# Stage 1: Build Stage
+# -------------------------
+FROM node:24-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
 
-### Workflow Performed
+# -------------------------
+# Stage 2: Production Stage
+# -------------------------
+FROM node:24-alpine AS production
+WORKDIR /app
+COPY --from=builder /app/package*.json ./
+RUN npm install --omit=dev
+COPY --from=builder /app/server.js ./
+EXPOSE 3000
+CMD ["npm", "start"]
+```
 
-- Created a multi-stage Dockerfile for Node.js application
-- Built the Docker image using `docker build -t multi-stage-hello .`
-- Ran container with `docker run -p 8080:3000 multi-stage-hello`
-- Verified application displayed "Hello World from Docker multi-stage build"
-- Verified running container using `docker ps`
-
-
-## Task 2: Documentation
-
-### Screenshots
-
-**Application Running Successfully:**
-
-![alt text](<../Screenshots/DockerFiles_Images/Screenshot 2026-09-02 at 6.14.35 PM.png>)
-
-**`docker ps` Output:**
-
-![alt text](<../Screenshots/DockerFiles_Images/Screenshot 2026-09-02 at 6.16.36 PM.png>)
-
-
-
-**Multi-stage Build Output:**
-![alt text](<../Screenshots/DockerFiles_Images/Screenshot 2026-09-02 at 6.15.28 PM.png>)
-
-
----
-
-## Task 3: Docker Application Deployment
-
-Deployed 3 different types of applications using Docker: Node.js, Python, and Java.
-
----
-
-## 1. Node.js Application
-
-### Workflow Performed
-
-- Created `nodejs-app` folder
-- Added Express.js application code
-- Created Dockerfile with Node.js base image
-- Built image using `docker build -t nodejs-hello .`
-- Ran container with `docker run -p 3000:3000 nodejs-hello`
-- Verified Hello World displayed on `http://localhost:3000`
-
-### Output
-
-![Node.js build](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.17.15 PM.png>)
-
-![alt text](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.20.25 PM.png>)
+### Execution & Verification on Monika's Laptop
+1. **Built image using multi-stage Dockerfile**:
+   ```bash
+   docker build -t multi-stage-hello session6-7-docker/multi-stage-dockerfile
+   ```
+2. **Ran container on port 8080**:
+   ```bash
+   docker run -d -p 8080:3000 --name multistage-monika multi-stage-hello
+   ```
+3. **Accessed application on port 8080**:
+   ```bash
+   curl http://localhost:8080
+   ```
+   **Observed Web Output**:
+   ```html
+   <h1>Hello World from Docker Multi-Stage Build!</h1>
+   ```
+4. **Verified running container using `docker ps` on port 8080**:
+   ```text
+   CONTAINER ID   IMAGE               COMMAND                  STATUS         PORTS                                         NAMES
+   536017d3a854   multi-stage-hello   "docker-entrypoint.s…"   Up 2 seconds   0.0.0.0:8080->3000/tcp, [::]:8080->3000/tcp   multistage-monika
+   ```
 
 ---
 
-## 2. React Application
+## Task 2: Documentation & Screenshots
 
-### Workflow Performed
+### Terminal Evidence: Build, Curl, and `docker ps` Output
+![Multi-Stage Build and docker ps](<../../Screenshots/DockerFiles_Images/multistage_build_and_ps.png>)
 
-- Created React app using `create-react-app`
-- Created Dockerfile with multi-stage build
-- Built image using `docker build -t react-hello .`
-- Ran container with `docker run -p 3001:80 react-hello`
-- Verified Hello World displayed on `http://localhost:3001`
-
-### Output
-
-
-![alt text](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.26.49 PM.png>)
-
-![alt text](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.27.11 PM.png>)
----
-
-## 3. Python Application (Flask)
-
-### Workflow Performed
-
-- Created `python-app` folder
-- Added Flask application code
-- Created Dockerfile with Python base image
-- Built image using `docker build -t python-hello .`
-- Ran container with `docker run -p 5000:5000 python-hello`
-- Verified Hello World displayed on `http://localhost:5000`
-
-### Output
-
-![alt text](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.44.26 PM.png>)
-
-![alt text](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.44.35 PM.png>)
+### Browser Evidence: Web Output on Port 8080
+![Multi-Stage Web Browser Output](<../../Screenshots/DockerFiles_Images/multistage_browser_output.png>)
 
 ---
----
 
-## 4. Java Application
+## Task 3: Docker Application Deployment (3 Application Types)
 
-### Workflow Performed
+Deployed 3 different types of applications using Docker on Monika's laptop:
 
-- Created `java-app` folder
-- Added simple Java HTTP server in `HelloWorld.java`
-- Created Dockerfile with OpenJDK base image
-- Built image using `docker build -t java-hello .`
-- Ran container with `docker run -p 8080:8080 java-hello`
-- Verified Hello World displayed on `http://localhost:8080`
+### 1. Node.js Application
+- **Directory**: `session6-7-docker/nodejs-app/`
+- **Framework**: Express.js HTTP Server
+- **Port Mapping**: `3000:3000`
+- **Output**: `Hello World from Node.js!`
+- **Command**: `docker run -d -p 3000:3000 nodejs-hello`
 
-### Output
+### 2. Python Application
+- **Directory**: `session6-7-docker/python-app/`
+- **Framework**: Flask Web Application
+- **Port Mapping**: `5000:5000`
+- **Output**: `Hello World from Python!`
+- **Command**: `docker run -d -p 5000:5000 python-hello`
 
-![Java build](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.57.42 PM.png>)
-![Java browser](<../Screenshots/Docker_Fundamentals/Screenshot 2026-09-02 at 2.58.02 PM.png>)
+### 3. Java Application
+- **Directory**: `session6-7-docker/java-app/`
+- **Technology**: Java HTTP Server (`HttpServer`)
+- **Port Mapping**: `8080:8080`
+- **Output**: `Hello World from Java!`
+- **Command**: `docker run -d -p 8080:8080 java-hello`

@@ -1,388 +1,161 @@
-# Linux Homework Tasks – Solutions & Notes
+# Linux Fundamentals Homework Tasks & Lab Report
 
 ### Student Details
 | Field | Value |
 |---|---|
 | **Name** | Monika |
-| **Email** | monika.24bcs10333@sst.scaler.com |
-| **Enrollment Number** | 10333 (24bcs10333) |
+| **Email** | [monika.24bcs10333@sst.scaler.com](mailto:monika.24bcs10333@sst.scaler.com) |
+| **Enrollment Number** | 10333 (`24bcs10333`) |
+| **Host System** | Ubuntu Linux 24.04 (Kernel 7.0) on ASUS Laptop |
 | **Repository** | [Monika-Bhardwaj/devops-heros](https://github.com/Monika-Bhardwaj/devops-heros) |
 
 ---
 
-# Linux Homework Tasks – Simple Notes and Commands
-
 ## Task 1: Soft Link & Hard Link
 
-### What is a Soft Link?
-
-A **soft link**, also called a **symbolic link**, is like a shortcut to another file.
-
-- It points to the path of the original file.
-- If the original file is deleted, the soft link stops working.
-- It can point to files or directories.
-- It can also point to a file on another filesystem.
+### What is a Soft Link (Symbolic Link)?
+A **soft link** (or symlink) is a pointer that references the path of another file or directory.
+- It stores the target file's path string, not its inode data.
+- It can span across different disk filesystems and partitions.
+- It can link to both files and directories.
+- If the original target file is moved or deleted, the soft link breaks ("dangling symlink").
 
 ### What is a Hard Link?
+A **hard link** is a direct directory entry referencing the identical inode and data blocks on the disk.
+- It shares the exact same inode number as the original file.
+- Changes made through either filename immediately reflect on the other.
+- If the original filename is removed, the data remains accessible through the hard link until all link counts reach zero.
+- Hard links cannot cross filesystem boundaries and cannot link directories (to prevent filesystem loops).
 
-A **hard link** is another name for the same file data.
+### Comparison Summary
+| Feature | Soft Link (`ln -s`) | Hard Link (`ln`) |
+|---|---|---|
+| **Inode Number** | Distinct inode pointing to path | Identical inode sharing data |
+| **Across Filesystems** | Supported | Not supported |
+| **Directory Support** | Supported | Not supported |
+| **Original File Deletion** | Link becomes broken/dangling | File content remains intact |
 
-- Both the original file and the hard link point to the same data.
-- If the original filename is deleted, the hard link can still access the data.
-- Hard links normally cannot be created for directories.
-- Hard links cannot normally cross filesystem boundaries.
-
-### Main Difference
-
-| Soft Link | Hard Link |
-|---|---|
-| Works like a shortcut | Another name for the same file |
-| Points to a pathname | Points to the same inode/data |
-| Breaks if the original path is deleted | Still works if the original filename is deleted |
-| Can point to directories | Normally cannot point to directories |
-| Can cross filesystems | Cannot cross filesystem boundaries |
-
-### Commands
-
-Create a test file:
-
+### Commands Executed on Laptop
 ```bash
-echo "Hello Linux" > original.txt
-```
+# Create original test file
+echo "Hello Linux - Monika ASUS Laptop" > original.txt
 
-Create a soft link:
-
-```bash
+# Create soft link
 ln -s original.txt softlink.txt
-```
 
-Create a hard link:
-
-```bash
+# Create hard link
 ln original.txt hardlink.txt
-```
 
-Check them:
-
-```bash
+# Inspect inodes
 ls -li original.txt softlink.txt hardlink.txt
 ```
 
-The `-i` option shows the inode number. The original file and hard link should have the same inode number.
-
-Test the links:
-
-```bash
-cat original.txt
-cat softlink.txt
-cat hardlink.txt
-```
-
-Delete the original file:
-
-```bash
-rm original.txt
-```
-
-Now check:
-
-```bash
-cat softlink.txt
-cat hardlink.txt
-```
-
-The soft link should fail because its target no longer exists. The hard link should still show:
-
+**Observed Output:**
 ```text
-Hello Linux
+1979514 -rw-rw-r-- 2 moneca moneca 33 Sep  3 05:53 hardlink.txt
+1979514 -rw-rw-r-- 2 moneca moneca 33 Sep  3 05:53 original.txt
+1979515 lrwxrwxrwx 1 moneca moneca 12 Sep  3 05:53 softlink.txt -> original.txt
 ```
-
-Delete the links:
+*(Notice that `original.txt` and `hardlink.txt` share inode `1979514`, whereas `softlink.txt` has its own inode `1979515`)*.
 
 ```bash
-rm softlink.txt
-rm hardlink.txt
+# Verify contents
+cat original.txt  # Output: Hello Linux - Monika ASUS Laptop
+cat softlink.txt  # Output: Hello Linux - Monika ASUS Laptop
+cat hardlink.txt  # Output: Hello Linux - Monika ASUS Laptop
+
+# Delete original file
+rm original.txt
+
+# Test link behavior after deletion
+cat softlink.txt  # Result: cat: softlink.txt: No such file or directory (broken link)
+cat hardlink.txt  # Result: Hello Linux - Monika ASUS Laptop (data preserved!)
 ```
 
-### Interview Answer
+### Screenshot Evidence: Soft and Hard Link Verification
+![Soft and Hard Links Verification](<../Screenshots/Linux_Fundamentals/soft_and_hard_links.png>)
 
-**Question: What is the difference between a soft link and a hard link?**
-
-A soft link is like a shortcut and points to the path of another file. If the original file is removed, the soft link becomes broken. A hard link is another name for the same file data and inode, so it can still access the data even if the original filename is deleted. Hard links normally cannot be used for directories or across different filesystems.
+### Interview Question & Answer
+**Q: How does Linux handle file deletion when both soft links and hard links exist?**  
+**A:** In Linux, file content is tracked by an inode and a link counter (`st_nlink`). A hard link increments the inode's link counter. When you run `rm original.txt`, the directory entry is unlinked and the link count decreases by 1. Because the hard link still points to that inode, the inode link count remains > 0 and the storage blocks are preserved; the data remains completely accessible through the hard link. A soft link, on the other hand, merely stores the string path of `original.txt`. When `original.txt` is removed, the soft link still points to that path name, which no longer exists, resulting in a broken/dangling symbolic link that returns `No such file or directory`.
 
 ---
 
-![alt text](<../Screenshots/Linux_Fundamentals/Screenshot 2026-08-31 at 9.56.15 PM.png>)
+## Task 2: `adduser` vs `useradd`
 
-# Task 2: `adduser` vs `useradd`
+### Technical Comparison
+| Feature | `adduser` | `useradd` |
+|---|---|---|
+| **Type** | High-level interactive Perl wrapper script | Low-level native compiled binary utility |
+| **Distribution** | Debian, Ubuntu | Universal standard Linux utility |
+| **Home Directory** | Created automatically with `/etc/skel` files | Not created unless `-m` flag is explicitly passed |
+| **Password Prompt** | Prompts interactively for password and details | Creates locked account without password unless `-p` or `passwd` run |
+| **Default Shell** | Automatically sets `/bin/bash` | Often defaults to `/bin/sh` unless `-s` provided |
+| **Best Use Case** | Interactive manual user management on Ubuntu/Debian | Automated shell scripts and cross-distribution provisioning |
 
-## `useradd`
+### Why `adduser` is Preferred on Ubuntu
+`adduser` is preferred on Ubuntu for interactive administration because it applies sensible system defaults:
+1. Automatically assigns unique UID and GID according to Debian policy (`/etc/adduser.conf`).
+2. Creates the home directory (`/home/<username>`) and populates default skeleton configuration files (`.bashrc`, `.profile`).
+3. Interactively guides the administrator through setting a secure password and user metadata.
 
-`useradd` is a low-level Linux command used to create users.
-
-Example:
-
+### Verification Commands Executed
 ```bash
-sudo useradd -m testuser
+which adduser useradd
+adduser --version
+useradd --help
+id moneca
 ```
 
-The `-m` option creates a home directory for the user.
-
-You may also need to set a password:
-
-```bash
-sudo passwd testuser
-```
-
-## `adduser`
-
-`adduser` is a more user-friendly command available on Debian/Ubuntu systems.
-
-It provides an interactive process and usually handles things such as:
-
-- Creating the user's home directory
-- Setting up the user's basic information
-- Asking for a password
-- Creating the user more conveniently
-
-Example:
-
-```bash
-sudo adduser testuser
-```
-
-It will ask you for a password and some optional user information.
-
-## Which one is preferred on Ubuntu?
-
-On **Ubuntu**, `adduser` is generally preferred for normal interactive user creation because it is easier to use and provides sensible defaults.
-
-`useradd` is still useful when you need a lower-level command or when creating users in scripts with specific options.
-
-### Simple interview answer
-
-**Question: What is the difference between `adduser` and `useradd`?**
-
-`useradd` is a lower-level command for creating users. `adduser` is a more user-friendly Debian/Ubuntu utility that makes user creation easier by handling common setup steps interactively. On Ubuntu, `adduser` is generally preferred for creating a normal user manually.
-
-## Create a Test User
-
-Recommended Ubuntu command:
-
-```bash
-sudo adduser testuser
-```
-
-Check that the user exists:
-
-```bash
-id testuser
-```
-
-You can also check the user's home directory:
-
-```bash
-ls -la /home/testuser
-```
-
-### Remove the test user after practice
-
-```bash
-sudo deluser --remove-home testuser
-```
-
-We only run the removal command if you no longer need the test user.
-
-![alt text](<../Screenshots/Linux_Fundamentals/Screenshot 2026-08-31 at 10.02.31 PM.png>)
+### Screenshot Evidence: `adduser` vs `useradd`
+![adduser vs useradd](<../Screenshots/Linux_Fundamentals/adduser_vs_useradd.png>)
 
 ---
 
-# Task 3: `journalctl`
+## Task 3: `journalctl`
 
-## What is `journalctl`?
+### What is `journalctl`?
+`journalctl` is the command-line utility for querying and analyzing system logs collected by **systemd-journald**. It indexes binary journal files, enabling fast filtering by service, priority, boot session, and timestamp without manually parsing raw log files.
 
-`journalctl` is a Linux command used to view logs collected by **systemd's journal**.
+### Common `journalctl` Commands
+- `journalctl`: Display all logs starting from earliest recorded event.
+- `journalctl -n 50`: Show last 50 log entries.
+- `journalctl -f`: Follow log stream live (similar to `tail -f`).
+- `journalctl -b`: Show logs from current system boot.
+- `journalctl -u <service>`: Filter logs for a specific systemd unit (e.g. `journalctl -u NetworkManager`).
+- `journalctl -p err`: Filter logs by syslog priority (e.g. `err`, `warning`, `info`).
+- `journalctl --since "1 hour ago"`: Query logs within a specific time window.
 
-Logs can help us understand:
-
-- What happened on the system
-- Why a service failed
-- When a service started or stopped
-- Errors and warnings
-- System events
-
-Most useful commands require `sudo` when you are viewing logs that are not available to your normal user.
-
-## View All Available Logs
-
+### Verification Commands Executed
 ```bash
-sudo journalctl
+journalctl -u NetworkManager -n 6 --no-pager
 ```
 
-This can show a lot of information.
-
-## View the Newest Logs First
-
-```bash
-sudo journalctl -r
-```
-
-## View Logs from the Current Boot
-
-```bash
-sudo journalctl -b
-```
-
-## Follow Logs Live
-
-This is similar to watching logs in real time:
-
-```bash
-sudo journalctl -f
-```
-
-Press `Ctrl+C` to stop.
-
-## Check Logs for a Specific Service
-
-Use the `-u` option with the service name.
-
-For example, for SSH:
-
-```bash
-sudo journalctl -u ssh
-```
-
-On some Linux distributions, the service may be named `sshd` instead:
-
-```bash
-sudo journalctl -u sshd
-```
-
-You can check the service status first:
-
-```bash
-systemctl status ssh
-```
-
-Then view its logs:
-
-```bash
-sudo journalctl -u ssh
-```
-
-## View Recent Logs
-
-For example, the last 50 lines:
-
-```bash
-sudo journalctl -n 50
-```
-
-For the last 50 lines of a specific service:
-
-```bash
-sudo journalctl -u ssh -n 50
-```
-
-## View Logs from a Specific Time
-
-For example:
-
-```bash
-sudo journalctl --since "1 hour ago"
-```
-
-Or:
-
-```bash
-sudo journalctl --since today
-```
-
-## Simple interview answer
-
-**Question: What is `journalctl` used for?**
-
-`journalctl` is used to view logs collected by systemd's journal. It is useful for troubleshooting the system and services. We can use options such as `-u` to check logs for a specific service, `-b` for the current boot, and `-f` to follow logs in real time.
-
-
-![alt text](<../Screenshots/Linux_Fundamentals/Screenshot 2026-08-31 at 10.05.21 PM.png>)
----
-
-# Task 4: Linux Command Cheat Sheet
-
-## Terminal Commands to Run
-
-| Task | Command | Purpose |
-|------|---------|---------|
-| Check current location | `pwd` | Shows your current directory |
-| Check current user | `whoami` | Shows the logged-in username |
-| Create homework folder | `mkdir -p ~/linux-homework` | Creates the homework directory |
-| Enter homework folder | `cd ~/linux-homework` | Moves into the homework directory |
-| Create test file | `echo "Hello Linux" > original.txt` | Creates a file with text |
-| Create soft link | `ln -s original.txt softlink.txt` | Creates a symbolic/soft link |
-| Create hard link | `ln original.txt hardlink.txt` | Creates a hard link |
-| Check links | `ls -li original.txt softlink.txt hardlink.txt` | Shows files and inode numbers |
-| Read original file | `cat original.txt` | Displays file contents |
-| Read soft link | `cat softlink.txt` | Tests the soft link |
-| Read hard link | `cat hardlink.txt` | Tests the hard link |
-| Delete original file | `rm original.txt` | Deletes the original file |
-| Test soft link after deletion | `cat softlink.txt` | Shows that the soft link is broken |
-| Test hard link after deletion | `cat hardlink.txt` | Shows that the hard link still works |
-| Delete soft link | `rm softlink.txt` | Removes the soft link |
-| Delete hard link | `rm hardlink.txt` | Removes the hard link |
-| Create test user | `sudo adduser testuser` | Creates a user on Ubuntu |
-| Check test user id | `id testuser` | Shows user and group information |
-| Check user's home directory | `ls -la /home/testuser` | Shows the user's home directory |
-| Delete test user | `sudo deluser --remove-home testuser` | Removes the test user and home directory |
-| View system logs | `sudo journalctl` | Displays system logs |
-| View current boot logs | `sudo journalctl -b` | Shows logs from the current boot |
-| View last 50 logs | `sudo journalctl -n 50` | Shows the latest 50 log entries |
-| View recent logs | `sudo journalctl --since "1 hour ago"` | Shows logs from the last hour |
-| View SSH logs | `sudo journalctl -u ssh -n 50` | Shows the latest 50 SSH logs |
-| Follow logs live | `sudo journalctl -f` | Displays new logs in real time |
-| Check SSH service | `sudo systemctl status ssh` | Checks whether SSH is running |
-| List services | `systemctl list-units --type=service` | Lists available services |
-| Create practice directory | `mkdir practice` | Creates a practice directory |
-| Enter practice directory | `cd practice` | Moves into the directory |
-| Create file | `touch file.txt` | Creates an empty file |
-| Write to file | `echo "Linux practice" > file.txt` | Adds text to the file |
-| Copy file | `cp file.txt copy.txt` | Creates a copy |
-| Rename file | `mv copy.txt renamed.txt` | Renames the file |
-| List files | `ls -l` | Shows detailed file information |
-| Search text | `grep "Linux" file.txt` | Searches for "Linux" in the file |
-| Find file | `find . -name "file.txt"` | Searches for file.txt |
-| Remove practice folder | `rm -r practice` | Deletes the practice directory |
-| Create permissions folder | `mkdir permissions-test` | Creates a folder for permission practice |
-| Create permissions file | `touch file.txt` | Creates a test file |
-| Check permissions | `ls -l file.txt` | Displays file permissions |
-| Change permissions | `chmod 644 file.txt` | Changes file permissions |
-| Remove permissions folder | `rm -r permissions-test` | Deletes the practice folder |
-| Check disk space | `df -h` | Shows disk usage |
-| Check memory | `free -h` | Shows RAM and swap usage |
-| Check processes | `ps aux` | Shows running processes |
-| Check network | `ip addr` | Shows network interfaces and IP addresses |
-| Check ports | `ss -tuln` | Shows listening network ports |
+### Screenshot Evidence: `journalctl` Service Logs
+![journalctl Service Logs](<../Screenshots/Linux_Fundamentals/journalctl_service_logs.png>)
 
 ---
 
-## ⭐ Most Important Commands to Memorize
+## Task 4: Linux Command Cheat Sheet
 
-| Command | Remember it as |
-|---------|----------------|
-| `ln -s` | Create soft link |
-| `ln` | Create hard link |
-| `adduser` | Create user on Ubuntu |
-| `journalctl` | View system logs |
-| `journalctl -u` | View service logs |
-| `journalctl -f` | View logs live |
-| `systemctl status` | Check service status |
-| `ls -l` | Check file permissions |
-| `chmod` | Change permissions |
-| `chown` | Change ownership |
-| `ps aux` | View processes |
-| `df -h` | Check disk space |
-| `free -h` | Check memory |
-| `ip addr` | Check IP/network |
-| `grep` | Search text |
-| `find` | Find files/directories |
+### Cheat Sheet Reference Table
+| Category | Command | Syntax / Example | Purpose |
+|---|---|---|---|
+| **System Info** | `uname` | `uname -sr` | Display Linux kernel release and system name |
+| **Identity** | `whoami` | `whoami` | Display currently active user name |
+| **Directory** | `pwd` | `pwd` | Print current working directory path |
+| **Memory** | `free` | `free -h` | Display total, used, and available RAM and swap in human-readable units |
+| **Disk Usage** | `df` | `df -h /` | Display disk partition capacity, used, and free space |
+| **Processes** | `ps` | `ps aux \| head -10` | Show snapshot of running processes |
+| **File Listing** | `ls` | `ls -la` | List all files including hidden with permissions and sizes |
+| **File Creation** | `touch` | `touch sample.txt` | Create empty file or update timestamps |
+| **Text Search** | `grep` | `grep -rn "pattern" .` | Search files recursively for regex patterns |
+| **Networking** | `ip addr` | `ip addr show` | Display network interfaces, IPv4, IPv6, and MAC addresses |
+
+### Verification Commands Executed
+```bash
+pwd && whoami && uname -sr && free -h && df -h /
+```
+
+### Screenshot Evidence: Linux Cheat Sheet Execution
+![Linux Cheat Sheet](<../Screenshots/Linux_Fundamentals/linux_cheat_sheet_commands.png>)

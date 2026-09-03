@@ -4,14 +4,14 @@
 | Field | Value |
 |---|---|
 | **Name** | Monika |
-| **Email** | monika.24bcs10333@sst.scaler.com |
-| **Enrollment Number** | 10333 (24bcs10333) |
+| **Email** | [monika.24bcs10333@sst.scaler.com](mailto:monika.24bcs10333@sst.scaler.com) |
+| **Enrollment Number** | 10333 (`24bcs10333`) |
+| **Host System** | Ubuntu Linux 24.04 (moneca-VivoBook-ASUSLaptop-X515JA-X515JA) |
 | **Repository** | [Monika-Bhardwaj/devops-heros](https://github.com/Monika-Bhardwaj/devops-heros) |
 
 ---
 
 ## Assignment Requirements Checklist
-
 - [x] Prints current date (`date`)
 - [x] Prints hostname (`hostname`)
 - [x] Prints username (`whoami`)
@@ -21,20 +21,25 @@
 - [x] Takes user input using `read -p`
 - [x] Creates a directory using `mkdir`
 - [x] Creates a file using `touch`
-- [x] Stores running processes information in the file using `>` output redirection
+- [x] Stores the running processes information in the file using `>` output redirection
 
 ---
 
-## Commands Used
+## Commands Used & Explanations
 
-- `mkdir`: Creates new directories (`mkdir -p "$DIR_NAME"`)
-- `touch`: Creates empty files (`touch "$DIR_NAME/$FILE_NAME"`)
-- `echo`: Outputs text and variables to the console
-- `df`: Displays disk space usage of filesystems (`df -h`)
-- `ps`: Reports current process snapshot (`ps aux`)
-- `read -p`: Prompts the user interactively and stores input into variables
-- **Variables**: Storing system data dynamically (`CURRENT_DATE`, `HOST_NAME`, `USER_NAME`, `DISK_USAGE`, `RUNNING_PROCESSES`, etc.)
-- `>` **Output Redirection**: Redirects standard output stream to overwrite a target file
+| Command / Construct | Usage in Script | Explanation |
+|---|---|---|
+| `echo` | `echo "..."` | Prints formatted status text, headers, and section dividers |
+| `date` | `date` / `$(date)` | Obtains current system date, time, and timezone |
+| `hostname` | `hostname` / `$(hostname)` | Retrieves system network nodename (`moneca-VivoBook-ASUSLaptop-X515JA-X515JA`) |
+| `whoami` | `whoami` / `$(whoami)` | Retrieves the current active login username (`moneca`) |
+| `df` | `df -h` | Reports filesystem disk space usage in human-readable gigabytes/megabytes |
+| `ps` | `ps aux` | Lists a full snapshot of all running processes in the system |
+| `read -p` | `read -p "Enter ...: " VAR` | Displays interactive prompt and accepts standard input from the user |
+| **Variables** | `CURRENT_DATE`, `USER_NAME`, etc. | Stores dynamic command substitution values for reuse |
+| `mkdir` | `mkdir -p "$DIR_NAME"` | Safely creates directory specified by the user |
+| `touch` | `touch "$DIR_NAME/$FILE_NAME"` | Creates empty file or updates file access timestamp |
+| `>` **Redirection** | `echo "$RUNNING_PROCESSES" > "$DIR_NAME/$FILE_NAME"` | Overwrites target file with complete process list |
 
 ---
 
@@ -105,43 +110,30 @@ echo "=========================================="
 
 ---
 
-## How to Execute the Script
-
-1. Give execute permissions:
-   ```bash
-   chmod +x system_info.sh
-   ```
-
-2. Run the script:
-   ```bash
-   ./system_info.sh
-   ```
-
----
-
-## Execution Output
+## Live Execution Output on Monika's Laptop
 
 ```text
+moneca@moneca-VivoBook-ASUSLaptop-X515JA-X515JA:~/devops-heros/session3-shell-scripting$ ./system_info.sh
 ==========================================
         SYSTEM INFORMATION REPORT
 ==========================================
 
-Current Date and Time: Thu Sep  3 05:23:33 AM IST 2026
+Current Date and Time: Thu Sep  3 05:55:17 AM IST 2026
 
 Hostname: moneca-VivoBook-ASUSLaptop-X515JA-X515JA
 
 Current User: moneca
 
 --- Variables Stored ---
-Date: Thu Sep  3 05:23:33 AM IST 2026
+Date: Thu Sep  3 05:55:17 AM IST 2026
 Host: moneca-VivoBook-ASUSLaptop-X515JA-X515JA
 User: moneca
 
 Disk Usage:
 Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           3.8G  2.9M  3.8G   1% /run
-/dev/nvme0n1p8  143G   27G  108G  20% /
-tmpfs           9.4G   52M  9.4G   1% /dev/shm
+/dev/nvme0n1p8  143G   28G  108G  21% /
+tmpfs           9.4G   47M  9.4G   1% /dev/shm
 efivarfs        128K   43K   81K  35% /sys/firmware/efi/efivars
 none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
 none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
@@ -151,7 +143,7 @@ tmpfs           1.9G   92K  1.9G   1% /run/user/1000
 
 Running Processes (first 10 lines):
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root           1  0.0  0.0  25928 16512 ?        Ss   04:40   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=53 splash
+root           1  0.0  0.0  25928 16516 ?        Ss   04:40   0:02 /usr/lib/systemd/systemd
 root           2  0.0  0.0      0     0 ?        S    04:40   0:00 [kthreadd]
 root           3  0.0  0.0      0     0 ?        S    04:40   0:00 [pool_workqueue_release]
 root           4  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-rcu_gp]
@@ -162,42 +154,26 @@ root           8  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-ne
 root          10  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/0:0H-kblockd]
 
 ==========================================
-Enter a directory name to create: sysinfo_logs
-Enter a filename to create (with extension): process_report.txt
+Enter a directory name to create: monika_sysinfo
+Enter a filename to create (with extension): processes.txt
 
-Directory 'sysinfo_logs' created successfully!
-File 'process_report.txt' created inside 'sysinfo_logs'
-Running processes information saved to 'sysinfo_logs/process_report.txt'
+Directory 'monika_sysinfo' created successfully!
+File 'processes.txt' created inside 'monika_sysinfo'
+Running processes information saved to 'monika_sysinfo/processes.txt'
 
 ==========================================
 Script execution completed!
-Check 'sysinfo_logs/process_report.txt' for process data
+Check 'monika_sysinfo/processes.txt' for process data
 ==========================================
 ```
 
----
-
-## Verification of Output File
-
+### Verification of Generated File
 ```bash
-head -n 10 sysinfo_logs/process_report.txt
-```
-
-```text
-USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root           1  0.0  0.0  25928 16512 ?        Ss   04:40   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=53 splash
-root           2  0.0  0.0      0     0 ?        S    04:40   0:00 [kthreadd]
-root           3  0.0  0.0      0     0 ?        S    04:40   0:00 [pool_workqueue_release]
-root           4  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-rcu_gp]
-root           5  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-sync_wq]
-root           6  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kvfree_rcu_reclaim]
-root           7  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-slub_flushwq]
-root           8  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-netns]
-root          10  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/0:0H-kblockd]
+ls -lh monika_sysinfo/processes.txt
+# Output: -rw-rw-r-- 1 moneca moneca 52K Sep  3 05:55 monika_sysinfo/processes.txt
 ```
 
 ---
 
-## Screenshots
-
-![Shell Script Execution Screenshot](<../Screenshots/Shell_Scripting/Screenshot 2026-08-31 at 10.48.31 PM.png>)
+## Screenshot Evidence: Script Execution
+![Shell Script Execution on Laptop](<../Screenshots/Shell_Scripting/system_info_execution.png>)

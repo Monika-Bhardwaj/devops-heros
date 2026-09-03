@@ -1,140 +1,72 @@
-# Git and GitHub Homework Solutions
+# Git and GitHub Homework Tasks & Lab Report
 
 ### Student Details
 | Field | Value |
 |---|---|
 | **Name** | Monika |
-| **Email** | monika.24bcs10333@sst.scaler.com |
-| **Enrollment Number** | 10333 (24bcs10333) |
+| **Email** | [monika.24bcs10333@sst.scaler.com](mailto:monika.24bcs10333@sst.scaler.com) |
+| **Enrollment Number** | 10333 (`24bcs10333`) |
+| **Host System** | ASUS Laptop (`moneca-VivoBook-ASUSLaptop-X515JA-X515JA`), Ubuntu Linux 24.04 |
 | **Repository** | [Monika-Bhardwaj/devops-heros](https://github.com/Monika-Bhardwaj/devops-heros) |
 
 ---
 
 ## Task 1: `git commit -a -m` vs `git commit -m`
 
-### Understanding the Difference
+### Technical Differences Explained
+| Feature | `git commit -m "msg"` | `git commit -a -m "msg"` |
+|---|---|---|
+| **Staging Area Requirement** | Requires explicit `git add` to stage files into index before committing | Automatically stages all tracked files that were modified or deleted |
+| **Untracked / New Files** | Does not commit untracked files | **Does NOT stage untracked files** (still requires explicit `git add`) |
+| **Safety / Precision** | Higher precision; allows committing specific granular changes | Convenient shortcut for committing all ongoing modifications to existing tracked files |
 
-| Command | What it does |
-|---------|--------------|
-| `git commit -m "message"` | Commits only files that are already staged (added with `git add`) |
-| `git commit -a -m "message"` | Automatically stages all **tracked** files that have been modified, then commits them (skips the `git add` step) |
+### Live Practical Demonstration
+1. Modified tracked file `tracked_file.txt` and created untracked file `untracked_file.txt`.
+2. Ran `git commit -m "Testing commit -m without git add"`:
+   - **Observed Result**: Git refused to commit, reporting `Changes not staged for commit: modified: tracked_file.txt` and `no changes added to commit`.
+3. Ran `git commit -a -m "Testing commit -a -m (auto-stages tracked changes)"`:
+   - **Observed Result**: Git automatically staged `tracked_file.txt` and committed it (`[main 47bb83b]`), while leaving `untracked_file.txt` intact as untracked (`?? untracked_file.txt`).
 
-> **Note:** `-a` only works on files Git is already tracking. New files still need to be added manually.
-
-### Workflow Performed
-
-- Deleted multiple image files and `Networking_Fundamentals.md` from `Submissions/` directory
-- Staged only `Networking_Fundamentals.md` using `git add` and committed with `git commit -m "Testing the command"` (commit `2d60d5f`)
-- Staged `image-1.png` individually using `git add`
-- Used `git commit -a -m "Testing the command with -a flag"` which automatically staged all remaining deleted image files (`image-1.png` through `image-8.png` and `image.png`) and committed them together (commit `a28ff51`)
-- Verified both commits in history using `git log`
-
-### Commands Used
-
-```bash
-# Stage only one file and commit
-git add Submissions/Networking_Fundamentals.md
-git commit -m "Testing the command"
-
-# Stage one file manually, then use -a for remaining tracked files
-git add Submissions/image-1.png
-git commit -a -m "Testing the command with -a flag"
-
-# Verify commits
-git log
-```
-
-**Output:**
-![alt text](<../Screenshots/Git_GitHub/Screenshot 2026-09-01 at 9.05.22 PM.png>)
-![git commit demonstration](<../Screenshots/Git_GitHub/Screenshot 2026-09-01 at 9.06.15 PM.png>)
-### Key Takeaway
-
-| Command | When to Use |
-|---------|-------------|
-| `git commit -m` | When you want to stage specific files individually first |
-| `git commit -a -m` | When you want to quickly commit all changes to tracked files |
+### Screenshot Evidence: Git Commit Comparison
+![Git Commit -a -m Comparison](<../Screenshots/Git_GitHub/git_commit_comparison.png>)
 
 ---
 
 ## Task 2: Git Cherry-Pick
 
-### What is Cherry-Pick?
+### What is `git cherry-pick`?
+`git cherry-pick <commit-hash>` is a powerful Git command that takes the changes introduced in a specific commit from another branch and applies them as a new commit on the currently checked-out branch without requiring a full branch merge or rebase.
 
-`git cherry-pick` allows you to take a specific commit from one branch and apply it to another branch without merging the entire branch.
+### Step-by-Step Workflow Executed
+1. **Created baseline commits on `main` branch**:
+   - `1cc44e0`: `main: feature commit 1`
+   - `82ebd2c`: `main: feature commit 2`
+2. **Created and switched to feature branch**:
+   ```bash
+   git checkout -b feature-monika
+   ```
+3. **Created 3 commits on `feature-monika`**:
+   - `daa68a3`: `feature: add feature A`
+   - `5d62efb`: `feature: add feature B targeted for cherry-pick` (Target commit)
+   - `bcc1a1b`: `feature: add feature C`
+4. **Identified the target commit using `git log --oneline`**:
+   Commit hash `5d62efb` was identified for `feature_b.txt`.
+5. **Switched to `main` branch**:
+   ```bash
+   git checkout main
+   ```
+6. **Executed cherry-pick**:
+   ```bash
+   git cherry-pick 5d62efb
+   ```
+   **Output:**
+   ```text
+   [main c694f8a] feature: add feature B targeted for cherry-pick
+    1 file changed, 1 insertion(+)
+    create mode 100644 feature_b.txt
+   ```
+7. **Verified history on `main`**:
+   `git log --oneline -n 3` confirmed that `feature_b.txt` is now available directly on `main` with new commit hash `c694f8a`, while preserving commit history cleanly!
 
-### Workflow Performed
-
-- Created 3 baseline commits on `main` branch (Testing the command, Testing the command with -a flag, screenshots corrected)
-- Created and switched to new branch `racoon`
-- Made 3 additional commits on `racoon` branch (first commit, second commit, third commit) creating files `temp_racoon.txt`, `temp_racoon2.txt`, `temp_racoon3.txt`
-- Used `git log --oneline` to identify the commit hash `c6ca12c` (second commit) on `racoon` branch
-- Switched back to `main` and executed `git cherry-pick c6ca12c85f46b941da8399991e929751428e09d4`
-- Verified the cherry-picked commit (`2dff4d3`) was successfully applied to `main` with file `temp_racoon2.txt`
-
-### Commands Used
-
-```bash
-# View branch structure
-git branch
-# Output: main, * racoon
-
-# Switch to main branch
-git checkout main
-
-# Cherry-pick specific commit from racoon branch
-git cherry-pick c6ca12c85f46b941da8399991e929751428e09d4
-
-# Verify the cherry-pick was successful
-git status
-# Output: Your branch is ahead of 'origin/main' by 3 commits
-
-# Verify the commit in history
-git log --oneline --grep="second" -i
-# Output: 2dff4d3 (HEAD -> main) second commit
-```
-
-**Output:**
-![git log branches](<../Screenshots/Git_GitHub/Screenshot 2026-09-01 at 9.12.39 PM.png>)
-![git branch tracking](<../Screenshots/Git_GitHub/Screenshot 2026-09-01 at 9.17.44 PM.png>)
-![alt text](<../Screenshots/Git_GitHub/Screenshot 2026-09-02 at 11.55.14 AM.png>)
-![alt text](<../Screenshots/Git_GitHub/Screenshot 2026-09-02 at 11.56.51 AM.png>)
-
-### Key Takeaway
-
-| Command | Purpose |
-|---------|---------|
-| `git cherry-pick <commit-hash>` | Apply a specific commit from another branch to current branch |
-| `git log --oneline` | View commit history to identify commit hashes |
-| `git checkout -b branch-name` | Create and switch to a new branch |
-| `git checkout branch-name` | Switch to an existing branch |
-
----
-
-## Combined Summary
-
-### What We Learned
-
-| Task | Key Learning |
-|------|--------------|
-| **Task 1** | `git commit -a -m` automatically stages all tracked changes, while `git commit -m` requires manual staging with `git add`. The `-a` flag saves time but only works on already tracked files. |
-| **Task 2** | `git cherry-pick` allows selective commit transfer between branches. It's useful when you want specific changes without merging entire branches. We successfully brought the "second commit" from the `racoon` branch into `main`. |
-
-### Commands to Remember
-
-```bash
-# Task 1 Commands
-git add <file>
-git commit -m "message"
-git commit -a -m "message"
-git log
-
-# Task 2 Commands
-git checkout -b <branch-name>
-git checkout <branch-name>
-git log --oneline
-git cherry-pick <commit-hash>
-git branch
-git status
-```
-
----
+### Screenshot Evidence: Git Cherry-Pick Workflow
+![Git Cherry Pick Workflow](<../Screenshots/Git_GitHub/git_cherry_pick_workflow.png>)
