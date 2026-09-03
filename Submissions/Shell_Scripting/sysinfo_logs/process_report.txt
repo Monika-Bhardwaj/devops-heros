@@ -1,0 +1,322 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  25928 16512 ?        Ss   04:40   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=53 splash
+root           2  0.0  0.0      0     0 ?        S    04:40   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    04:40   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/0:0H-kblockd]
+root          13  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    04:40   0:01 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    04:40   0:00 [rcu_exp_par_gp_kthread_worker/0]
+root          17  0.0  0.0      0     0 ?        S    04:40   0:00 [rcu_exp_gp_kthread_worker]
+root          18  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    04:40   0:00 [kprobe-optimizer]
+root          20  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/0]
+root          21  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/0]
+root          22  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/1]
+root          23  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/1]
+root          24  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/1]
+root          25  0.0  0.0      0     0 ?        S    04:40   0:01 [ksoftirqd/1]
+root          27  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/1:0H-kblockd]
+root          28  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/2]
+root          29  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/2]
+root          30  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/2]
+root          31  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/2]
+root          33  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/2:0H-kblockd]
+root          34  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/3]
+root          35  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/3]
+root          36  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/3]
+root          37  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/3]
+root          39  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/3:0H-kblockd]
+root          40  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/4]
+root          41  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/4]
+root          42  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/4]
+root          43  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/4]
+root          45  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/4:0H-kblockd]
+root          46  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/5]
+root          47  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/5]
+root          48  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/5]
+root          49  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/5]
+root          51  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/5:0H-kblockd]
+root          52  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/6]
+root          53  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/6]
+root          54  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/6]
+root          55  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/6]
+root          57  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/6:0H-kblockd]
+root          58  0.0  0.0      0     0 ?        S    04:40   0:00 [cpuhp/7]
+root          59  0.0  0.0      0     0 ?        S    04:40   0:00 [idle_inject/7]
+root          60  0.0  0.0      0     0 ?        S    04:40   0:00 [migration/7]
+root          61  0.0  0.0      0     0 ?        S    04:40   0:00 [ksoftirqd/7]
+root          63  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/7:0H-kblockd]
+root          64  0.0  0.0      0     0 ?        S    04:40   0:00 [kdevtmpfs]
+root          65  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-inet_frag_wq]
+root          66  0.0  0.0      0     0 ?        I    04:40   0:00 [rcu_tasks_kthread]
+root          67  0.0  0.0      0     0 ?        I    04:40   0:00 [rcu_tasks_rude_kthread]
+root          68  0.0  0.0      0     0 ?        S    04:40   0:00 [kauditd]
+root          69  0.0  0.0      0     0 ?        S    04:40   0:00 [khungtaskd]
+root          70  0.0  0.0      0     0 ?        S    04:40   0:00 [oom_reaper]
+root          73  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-writeback]
+root          74  0.0  0.0      0     0 ?        S    04:40   0:00 [kcompactd0]
+root          75  0.0  0.0      0     0 ?        SN   04:40   0:00 [ksmd]
+root          76  0.0  0.0      0     0 ?        SN   04:40   0:00 [khugepaged]
+root          77  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kblockd]
+root          78  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-blkcg_punt_bio]
+root          79  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kintegrityd]
+root          80  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/9-acpi]
+root          81  0.0  0.0      0     0 ?        I    04:40   0:00 [kworker/4:1-mm_percpu_wq]
+root          84  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-tpm_dev_wq]
+root          85  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-ata_sff]
+root          86  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-md_bitmap]
+root          87  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-md_llbitmap_io]
+root          88  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-md_llbitmap_unplug]
+root          89  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-edac-poller]
+root          90  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-devfreq_wq]
+root          91  0.0  0.0      0     0 ?        S    04:40   0:00 [watchdogd]
+root          92  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-quota_events_unbound]
+root          93  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/120-dmar0-prq]
+root          94  0.0  0.0      0     0 ?        S    04:40   0:00 [kswapd0]
+root          95  0.0  0.0      0     0 ?        S    04:40   0:00 [ecryptfs-kthread]
+root          96  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kthrotld]
+root          97  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/123-aerdrv]
+root          98  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/123-pcie-dpc]
+root          99  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/124-aerdrv]
+root         100  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/124-pcie-dpc]
+root         101  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-acpi_thermal_pm]
+root         103  0.0  0.0      0     0 ?        S    04:40   0:00 [hwrng]
+root         104  0.0  0.0      0     0 ?        I    04:40   0:00 [kworker/5:1-mm_percpu_wq]
+root         105  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-mld]
+root         106  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-ipv6_addrconf]
+root         107  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-kstrp]
+root         108  0.0  0.0      0     0 ?        I    04:40   0:00 [kworker/3:1-cgroup_bpf_destroy]
+root         109  0.0  0.0      0     0 ?        I    04:40   0:00 [kworker/6:1-events]
+root         122  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-charger_manager]
+root         124  0.0  0.0      0     0 ?        I    04:40   0:01 [kworker/0:2-events]
+root         235  0.0  0.0      0     0 ?        I    04:40   0:00 [kworker/2:2-cgroup_release]
+root         326  0.0  0.0      0     0 ?        S    04:40   0:00 [scsi_eh_0]
+root         327  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-scsi_tmf_0]
+root         329  0.5  0.0      0     0 ?        S    04:40   0:13 [irq/53-ELAN1300:00]
+root         332  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-nvme-wq]
+root         333  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-nvme-reset-wq]
+root         334  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-nvme-delete-wq]
+root         335  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-nvme-auth-wq]
+root         336  0.0  0.0      0     0 ?        S    04:40   0:00 [spi0]
+root         337  0.0  0.0      0     0 ?        I    04:40   0:01 [kworker/3:2-events]
+root         351  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/7:1H-kblockd]
+root         356  0.0  0.0      0     0 ?        S    04:40   0:00 [jbd2/nvme0n1p8-8]
+root         357  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-ext4-rsv-conversion]
+root         409  0.0  0.1  50936 20496 ?        S<s  04:40   0:00 /usr/lib/systemd/systemd-journald
+root         452  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/3:1H-i915_cleanup]
+root         453  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/2:1H-i915_cleanup]
+systemd+     455  0.0  0.0  16808  7496 ?        Ss   04:40   0:00 /usr/lib/systemd/systemd-oomd
+systemd+     456  0.0  0.0  22784 14740 ?        Ss   04:40   0:00 /usr/lib/systemd/systemd-resolved
+root         461  0.0  0.0  41652 14968 ?        Ss   04:40   0:00 /usr/lib/systemd/systemd-udevd
+root         463  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/6:1H-i915_cleanup]
+root         466  0.0  0.0      0     0 ?        S    04:40   0:00 [psimon]
+root         517  0.0  0.0      0     0 ?        S    04:40   0:00 [irq/144-mei_me]
+root         523  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-cfg80211]
+root         640  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-led_workqueue]
+root         688  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/0:1H-i915_cleanup]
+root         691  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/4:1H-i915_cleanup]
+root         694  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/5:1H-kblockd]
+root         695  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/1:1H-i915_cleanup]
+root         713  0.0  0.0      0     0 ?        I    04:40   0:01 [kworker/u32:10-efi_rts_wq]
+root         748  0.0  0.0      0     0 ?        I<   04:40   0:00 [kworker/R-ttm]
+root         755  0.0  0.0      0     0 ?        S    04:40   0:00 [card1-crtc0]
+root         756  0.0  0.0      0     0 ?        S    04:40   0:00 [card1-crtc1]
+root         757  0.0  0.0      0     0 ?        S    04:40   0:00 [card1-crtc2]
+root         778  1.4  0.0      0     0 ?        S    04:40   0:37 [irq/146-rtw88_pci]
+avahi       1298  3.7  0.0  11644  9688 ?        Ss   04:40   1:35 avahi-daemon: running [moneca-VivoBook-ASUSLaptop-X515JA-X515JA.local]
+root        1299  0.0  0.0  13132  7344 ?        Ss   04:40   0:00 /usr/libexec/bluetooth/bluetoothd
+root        1300  0.0  0.0   2888  1992 ?        Ss   04:40   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+message+    1301  0.0  0.0  12024  8864 ?        Ss   04:40   0:01 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        1312  0.0  0.1  49428 29868 ?        Ss   04:40   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+polkitd     1315  0.0  0.0 389172 12448 ?        Ssl  04:40   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root        1322  0.0  0.2 2321584 42828 ?       Ssl  04:40   0:00 /usr/lib/snapd/snapd
+root        1326  0.0  0.0 312216  8488 ?        Ssl  04:40   0:00 /usr/libexec/accounts-daemon
+root        1328  0.0  0.0   9660  3376 ?        Ss   04:40   0:00 /usr/sbin/cron -f -P
+root        1330  0.0  0.0 310508  7580 ?        Ssl  04:40   0:00 /usr/libexec/switcheroo-control
+root        1332  0.0  0.0  18944  9932 ?        Ss   04:40   0:00 /usr/lib/systemd/systemd-logind
+root        1333  0.0  0.0 389004 10132 ?        Ssl  04:40   0:01 /usr/sbin/thermald --systemd --dbus-enable --adaptive
+root        1334  0.0  0.0 544204 15776 ?        Ssl  04:40   0:00 /usr/libexec/udisks2/udisksd
+avahi       1348  0.0  0.0   6560  1648 ?        S    04:40   0:00 avahi-daemon: chroot helper
+_chrony     1389  0.0  0.0  20424  6300 ?        S    04:40   0:00 /usr/sbin/chronyd -n -F 1
+syslog      1401  0.0  0.0 220604  6484 ?        Ssl  04:40   0:00 /usr/sbin/rsyslogd -n -iNONE
+_chrony     1428  0.0  0.0  12120  3408 ?        S    04:40   0:00 /usr/sbin/chronyd -n -F 1
+root        1449  0.0  0.1 339300 22188 ?        Ssl  04:40   0:00 /usr/sbin/NetworkManager --no-daemon
+root        1454  0.0  0.0  18896 12448 ?        Ss   04:40   0:00 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+root        1460  0.0  0.0 321968 12128 ?        Ssl  04:40   0:00 /usr/libexec/upowerd
+root        1490  0.0  0.0 391612 13776 ?        Ssl  04:40   0:00 /usr/sbin/ModemManager
+root        1605  0.0  0.0  32068 13016 ?        Ss   04:40   0:00 /usr/sbin/cupsd -l
+root        1619  0.0  0.1 128700 32636 ?        Ssl  04:40   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1642  0.0  0.0 387192 10536 ?        Ssl  04:40   0:00 /usr/sbin/gdm3
+root        1697  0.0  0.0      0     0 ?        S    04:40   0:00 [psimon]
+rtkit       1744  0.0  0.0  21872  3600 ?        SNsl 04:40   0:00 /usr/libexec/rtkit-daemon
+root        1834  0.0  0.0      0     0 ?        S<   04:40   0:00 [krfcommd]
+colord      1905  0.0  0.0 320116 16336 ?        Ssl  04:40   0:00 /usr/libexec/colord
+root        2726  0.0  0.0 175472 10800 ?        Sl   04:41   0:00 gdm-session-worker [pam/gdm-password]
+cups-br+    2863  0.0  0.1 207540 22352 ?        Ssl  04:41   0:00 /usr/sbin/cups-browsed
+root        2875  0.0  0.0 311884  8024 ?        Ssl  04:41   0:00 /usr/libexec/power-profiles-daemon
+moneca      2999  0.0  0.0  23888 15300 ?        Ss   04:41   0:00 /usr/lib/systemd/systemd --user
+moneca      3002  0.0  0.0  23456  4200 ?        S    04:41   0:00 (sd-pam)
+moneca      3036  0.0  0.0  10748  8132 ?        Ss   04:41   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+moneca      3037  0.0  0.0 109468 13160 ?        S<sl 04:41   0:00 /usr/bin/pipewire
+moneca      3041  0.0  0.0 185836 11092 ?        SLsl 04:41   0:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+moneca      3052  0.0  0.0   7560  4052 ?        Ss   04:41   0:00 /usr/bin/mpris-proxy
+moneca      3053  0.0  0.1 491596 23980 ?        S<sl 04:41   0:00 /usr/bin/wireplumber
+moneca      3056  0.0  0.0  87412  5796 ?        Ssl  04:41   0:00 /usr/bin/pipewire -c filter-chain.conf
+moneca      3058  0.0  0.0 180448 17368 ?        S<sl 04:41   0:00 /usr/bin/pipewire-pulse
+moneca      3123  0.0  0.0 689984  8568 ?        Ssl  04:42   0:00 /usr/libexec/xdg-document-portal
+moneca      3127  0.0  0.0 309964  6776 ?        Ssl  04:42   0:00 /usr/libexec/xdg-permission-store
+root        3134  0.0  0.0   2792  2272 ?        Ss   04:42   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+moneca      3172  0.0  0.0 170796  6760 tty2     Ssl+ 04:42   0:00 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session --session=ubuntu
+moneca      3198  0.0  0.0 175204  9556 tty2     Sl+  04:42   0:00 /usr/libexec/gnome-session-init-worker ubuntu
+moneca      3388  0.0  0.0 310552  8304 ?        Ssl  04:42   0:00 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+moneca      3389  0.0  0.0  89808  5788 ?        Ssl  04:42   0:00 /usr/libexec/gnome-session-ctl --monitor
+moneca      3390  0.0  0.0  10484  6652 ?        Ss   04:42   0:00 /usr/bin/ssh-agent -D
+moneca      3404  0.0  0.0 315672  8928 ?        Ssl  04:42   0:00 /usr/libexec/gvfsd
+moneca      3412  0.0  0.0 400968  7908 ?        Sl   04:42   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+moneca      3415  0.0  0.0 681396 11516 ?        Ssl  04:42   0:00 /usr/libexec/gnome-session-service --session=ubuntu
+moneca      3428 13.7  1.4 6087076 279072 ?      Ssl  04:42   5:44 /usr/bin/gnome-shell --mode=ubuntu
+moneca      3473  0.0  0.0 381068  8116 ?        Ssl  04:42   0:00 /usr/libexec/at-spi-bus-launcher
+moneca      3480  0.0  0.0   8740  5296 ?        S    04:42   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+moneca      3482  0.0  0.0 168688  7776 ?        Sl   04:42   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+moneca      3507  0.0  0.0 658608 19464 ?        Sl   04:42   0:00 /usr/libexec/gnome-shell-calendar-server
+moneca      3514  0.0  0.2 610700 46160 ?        Ssl  04:42   0:00 /usr/libexec/evolution-source-registry
+moneca      3525  0.0  0.1 2738072 32276 ?       Sl   04:42   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+moneca      3545  0.0  0.0 388124 11568 ?        Ssl  04:42   0:01 /usr/bin/ibus-daemon --panel disable
+moneca      3548  0.0  0.0 256336 10396 ?        Ssl  04:42   0:00 /usr/libexec/gsd-a11y-settings
+moneca      3553  0.0  0.0 254168 10456 ?        Ssl  04:42   0:00 /usr/libexec/gsd-color
+moneca      3554  0.0  0.0 262700 12524 ?        Ssl  04:42   0:00 /usr/libexec/gsd-datetime
+moneca      3556  0.0  0.0 393308 10716 ?        Ssl  04:42   0:00 /usr/libexec/gsd-housekeeping
+moneca      3562  0.0  0.0 385676  8032 ?        Ssl  04:42   0:00 /usr/libexec/gsd-keyboard
+moneca      3568  0.0  0.0 472360 14828 ?        Ssl  04:42   0:00 /usr/libexec/gsd-media-keys
+moneca      3574  0.0  0.0 469736 11864 ?        Ssl  04:42   0:00 /usr/libexec/gsd-power
+moneca      3576  0.0  0.0 312168  9904 ?        Sl   04:42   0:00 /usr/libexec/gsd-disk-utility-notify
+moneca      3579  0.0  0.0 330164 14520 ?        Ssl  04:42   0:00 /usr/libexec/gsd-print-notifications
+moneca      3581  0.0  0.1 645840 34188 ?        Sl   04:42   0:00 /usr/bin/update-notifier
+moneca      3592  0.0  0.3 916540 64272 ?        Sl   04:42   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+moneca      3594  0.0  0.0 402184  8056 ?        Ssl  04:42   0:00 /usr/libexec/gsd-rfkill
+moneca      3596  0.0  0.0 172432  7404 ?        Ssl  04:42   0:00 /usr/libexec/gsd-screensaver-proxy
+moneca      3601  0.0  0.0 469940 12904 ?        Ssl  04:42   0:00 /usr/libexec/gsd-sharing
+moneca      3605  0.0  0.0 388252  9752 ?        Ssl  04:42   0:00 /usr/libexec/gsd-smartcard
+moneca      3606  0.0  0.0 257488 10652 ?        Ssl  04:42   0:00 /usr/libexec/gsd-sound
+moneca      3616  0.0  0.0 392820 10088 ?        Ssl  04:42   0:00 /usr/libexec/gsd-usb-protection
+moneca      3619  0.0  0.0 392952 10548 ?        Ssl  04:42   0:00 /usr/libexec/gsd-wwan
+moneca      3637  0.0  0.1 469376 32096 ?        Sl   04:42   0:00 /usr/libexec/goa-daemon
+moneca      3658  0.0  0.0 245596  8188 ?        Sl   04:42   0:00 /usr/libexec/ibus-dconf
+moneca      3669  0.1  0.1 502492 36632 ?        Sl   04:42   0:03 /usr/libexec/ibus-extension-gtk3
+moneca      3681  0.0  0.0 311096  8016 ?        Sl   04:42   0:00 /usr/libexec/ibus-portal
+moneca      3728  0.0  0.0 390532 10228 ?        Sl   04:42   0:00 /usr/libexec/goa-identity-service
+moneca      3732  0.0  0.1 895932 26452 ?        Ssl  04:42   0:00 /usr/libexec/evolution-calendar-factory
+moneca      3735  0.8  0.3 1245300 67288 ?       SNsl 04:42   0:21 /usr/libexec/localsearch-3
+moneca      3745  0.0  0.1 631704 21216 ?        Ssl  04:42   0:00 /usr/libexec/xdg-desktop-portal
+moneca      3748  0.0  0.0 402076 12680 ?        Sl   04:42   0:00 /usr/libexec/gsd-printer
+moneca      3752  0.0  0.1 2738032 32356 ?       Sl   04:42   0:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+moneca      3807  0.0  0.2 690796 45396 ?        Ssl  04:42   0:00 /usr/libexec/xdg-desktop-portal-gnome
+moneca      3829  0.0  0.1 828592 31088 ?        Ssl  04:42   0:00 /usr/libexec/evolution-addressbook-factory
+moneca      3845  0.0  0.0 389616 11176 ?        Ssl  04:42   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+moneca      3846  0.0  0.0 171772  8188 ?        Sl   04:42   0:00 /usr/libexec/ibus-engine-simple
+moneca      3861  0.0  0.0 310432  7316 ?        Ssl  04:42   0:00 /usr/libexec/gvfs-goa-volume-monitor
+moneca      3866  0.0  0.0 311448  7832 ?        Ssl  04:42   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+moneca      3871  0.0  0.0 392472  9516 ?        Ssl  04:42   0:00 /usr/libexec/gvfs-afc-volume-monitor
+moneca      3877  0.0  0.0 310480  7388 ?        Ssl  04:42   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+moneca      3926  0.0  0.0 171452  7248 ?        Ssl  04:42   0:00 /usr/libexec/gvfsd-metadata
+moneca      4079  0.0  0.0 165352  6488 ?        Ssl  04:42   0:00 /usr/libexec/dconf-service
+moneca      4130  0.0  0.0 610824 10088 ?        Sl   04:42   0:00 /usr/libexec/gvfsd-trash --spawner :1.20 /org/gtk/gvfs/exec_spaw/0
+moneca      4186  0.0  0.1 494736 28964 ?        Ssl  04:42   0:00 /usr/libexec/xdg-desktop-portal-gtk
+moneca      4229  0.0  0.0  47752 14532 ?        Ss   04:42   0:00 /snap/snapd-desktop-integration/361/usr/bin/snapd-desktop-integration
+moneca      4301  0.0  0.3 3206388 73904 ?       Sl   04:42   0:01 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+moneca      4359  0.0  0.1 445132 32456 ?        Sl   04:42   0:00 /snap/snapd-desktop-integration/361/usr/bin/snapd-desktop-integration
+moneca      4590  0.4  1.1 1459941952 226396 ?   Sl   04:42   0:11 /snap/antigravity/25/opt/antigravity/antigravity
+moneca      4632  0.0  0.2 50873212 58032 ?      S    04:42   0:00 /snap/antigravity/25/opt/antigravity/antigravity --type=zygote --no-zygote-sandbox
+moneca      4633  0.0  0.2 50873200 57744 ?      S    04:42   0:00 /snap/antigravity/25/opt/antigravity/antigravity --type=zygote
+moneca      4635  0.0  0.0 50873224 13768 ?      S    04:42   0:00 /snap/antigravity/25/opt/antigravity/antigravity --type=zygote
+moneca      4670  0.3  0.8 51283176 171512 ?     Sl   04:42   0:07 /snap/antigravity/25/opt/antigravity/antigravity --type=zygote --no-zygote-sandbox
+moneca      4675  0.0  0.4 523496 82544 ?        Sl   04:42   0:00 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.XVWYU3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients -enable-ei-portal
+moneca      4685  0.0  0.0 253840 13556 ?        Ssl  04:42   0:00 /usr/libexec/gsd-xsettings
+moneca      4691  0.0  0.4 1027708 98352 ?       Sl   04:42   0:00 /usr/libexec/mutter-x11-frames
+moneca      4711  0.0  0.3 524048 67820 ?        Sl   04:42   0:00 /usr/libexec/ibus-x11
+moneca      4725  0.0  0.4 50693500 82160 ?      Sl   04:42   0:00 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=801cf899-2978-4907-8628-d7638e94d4ed,no_channel --user-data-dir=/home/moneca/.config/Antigravity --standard-schemes=plugin --secure-schemes=plugin --cors-schemes=plugin --fetch-schemes=plugin --service-worker-schemes=plugin --code-cache-schemes=plugin --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3314127107629646161,6103464904342831248,262144 --enable-features=PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=7,i,6101888425983058597,12249922409844519856,4 --trace-process-track-uuid=3190708989122997041
+moneca      4897  0.2  1.1 2380316 227432 ?      Sl   04:42   0:06 /snap/antigravity/25/opt/antigravity/resources/bin/language_server --standalone --override_ide_name antigravity --subclient_type hub --override_ide_version 2.11.0 --override_user_agent_name antigravity --https_server_port 0 --csrf_token b97f69d2-32a2-4644-a27b-9ff6deabff4b --app_data_dir antigravity --api_server_url https://generativelanguage.googleapis.com --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --enable_sidecars --host_bridge_url=http://127.0.0.1:34209 --host_bridge_token=7c5b9fef9be71d7256f3f12a23d784b02296cb67046f07ae8913506d914b1892
+moneca      4939  0.0  0.3 50743088 70028 ?      Sl   04:42   0:00 /proc/self/exe --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=801cf899-2978-4907-8628-d7638e94d4ed,no_channel --user-data-dir=/home/moneca/.config/Antigravity --standard-schemes=plugin --secure-schemes=plugin --cors-schemes=plugin --fetch-schemes=plugin --service-worker-schemes=plugin --code-cache-schemes=plugin --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,3314127107629646161,6103464904342831248,262144 --enable-features=PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=7,i,6101888425983058597,12249922409844519856,4 --trace-process-track-uuid=3190708991934122588
+moneca      4957  0.0  0.0      0     0 ?        Z    04:42   0:00 [xdg-open] <defunct>
+moneca      4965  0.0  0.1 638736 25976 ?        Sl   04:42   0:00 /usr/libexec/gvfsd-http --spawner :1.20 /org/gtk/gvfs/exec_spaw/1
+moneca      4971 22.0  3.1 12436740 612552 ?     Sl   04:42   9:01 /snap/firefox/8107/usr/lib/firefox/firefox https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1071006060591-tmhssin2h21lcre235vtolojh4g403ep.apps.googleusercontent.com&code_challenge=wLLb1qNho0RBx0G4hskSPSF8KPWjqSakI54F3z9sZ8M&code_challenge_method=S256&prompt=consent&redirect_uri=http%3A%2F%2Flocalhost%3A42505%2Fauth%2Fcallback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcclog+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fexperimentsandconfigs+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faicode&state=pZBkTctXpNcZCo33lgATvg
+moneca      5046  0.0  0.0 149392  2972 ?        Sl   04:42   0:00 /snap/firefox/8107/usr/lib/firefox/crashhelper 4971 9 /tmp/ 11
+moneca      5143  0.0  0.1 445548 34956 ?        S    04:42   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -ipcHandle 0 -signalPipe 1 -initialChannelId {4ece6f10-40d0-4ee7-9f3e-9d2f6238bb64} -parentPid 4971 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 1 forkserver
+moneca      5146  0.0  0.2 460012 48052 ?        Sl   04:42   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -parentBuildID 20260404010525 -prefsHandle 0:38003 -prefMapHandle 1:284126 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {d2e4b6f8-23e5-4933-b3ee-f26930027905} -parentPid 4971 -crashReporter 5 -crashHelper 6 -appDir /snap/firefox/8107/usr/lib/firefox/browser 2 socket
+moneca      5176  0.0  0.6 923900 135536 ?       Sl   04:42   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -parentBuildID 20260404010525 -prefsHandle 0:38121 -prefMapHandle 1:284126 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {c2c9cbfd-8cd8-4d0e-8073-0380f86eb62d} -parentPid 4971 -crashReporter 5 -crashHelper 6 -appDir /snap/firefox/8107/usr/lib/firefox/browser 4 rdd
+moneca      5227  0.0  0.1 1951324 27304 ?       Sl   04:42   0:00 /usr/bin/snap userd
+moneca      5367  0.1  0.9 19609868 179596 ?     Sl   04:42   0:04 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:48250 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {fd857d37-137f-4d05-9936-6f66fa6898ff} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 5 tab
+moneca      5683  0.0  0.2 636148 54864 ?        Sl   04:42   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -parentBuildID 20260404010525 -sandboxingKind 0 -prefsHandle 0:48320 -prefMapHandle 1:284126 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {dcf91aeb-650a-4ca8-a210-f304e7559fb7} -parentPid 4971 -crashReporter 5 -crashHelper 6 -appDir /snap/firefox/8107/usr/lib/firefox/browser 6 utility
+moneca      5869  0.1  0.7 2656648 150472 ?      Sl   04:42   0:03 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:48320 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {f47e88a4-2425-4e0c-a6b4-0edcca41a871} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 10 tab
+moneca      6551  0.0  0.0 390208 10232 ?        Sl   04:49   0:00 /usr/libexec/gvfsd-recent --spawner :1.20 /org/gtk/gvfs/exec_spaw/2
+moneca      6552  0.0  0.0 389856  9848 ?        Sl   04:49   0:00 /usr/libexec/gvfsd-network --spawner :1.20 /org/gtk/gvfs/exec_spaw/3
+moneca      6565  0.0  0.0 391004  9768 ?        Sl   04:49   0:00 /usr/libexec/gvfsd-dnssd --spawner :1.20 /org/gtk/gvfs/exec_spaw/4
+moneca      6571  0.0  0.0 389440  9984 ?        Sl   04:49   0:00 /usr/libexec/gvfsd-wsdd --spawner :1.20 /org/gtk/gvfs/exec_spaw/5
+moneca      6576  0.0  0.1  48612 36044 ?        S    04:49   0:00 python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1000/gvfsd/wsdd
+uuidd       6580  0.0  0.0  10704  3332 ?        Ss   04:49   0:00 /usr/sbin/uuidd --socket-activation --cont-clock
+root        7395  0.0  0.0      0     0 ?        I    04:50   0:00 [kworker/2:0-i915-unordered]
+root        8225  0.2  0.0      0     0 ?        I    05:00   0:04 [kworker/1:1-i915-unordered]
+root        8340  0.0  0.0      0     0 ?        I    05:01   0:00 [kworker/7:2-cgroup_free]
+root        8643  0.0  0.0      0     0 ?        I    05:03   0:00 [kworker/u32:1-leds]
+moneca      8681  4.2  2.1 3016228 421008 ?      Sl   05:04   0:49 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {8542ac38-7ef9-49c3-aefe-c5d4b23285a3} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 24 tab
+root        8763  0.1  0.0      0     0 ?        I<   05:06   0:01 [kworker/u33:1-rtw_tx_wq]
+root        8808  0.0  0.0      0     0 ?        I    05:06   0:00 [kworker/4:0-mm_percpu_wq]
+root        8840  0.1  0.0      0     0 ?        I<   05:07   0:01 [kworker/u33:2-rtw_tx_wq]
+moneca      8842  0.3  0.6 2627840 126700 ?      Sl   05:07   0:03 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {07218ab3-701c-4d93-bc3e-4cf3305b4a7f} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 27 tab
+moneca      8902  0.5  0.6 1526096 133396 ?      Sl   05:08   0:04 /usr/bin/ptyxis --gapplication-service
+moneca      8911  0.0  0.0 239944  7972 ?        Ssl  05:08   0:00 /usr/libexec/ptyxis-agent --socket-fd=3 --rlimit-nofile=1024
+moneca      8930  0.0  0.0  11424  5828 pts/0    Ss   05:08   0:00 /usr/bin/bash
+root        8983  0.0  0.0      0     0 ?        I    05:10   0:00 [kworker/7:0-events]
+root        8994  0.0  0.0      0     0 ?        I    05:10   0:00 [kworker/u32:3-events_unbound]
+root        9005  0.0  0.0      0     0 ?        I    05:11   0:00 [kworker/0:0]
+moneca      9075  4.0  1.6 1461665796 323716 pts/0 SLl+ 05:12   0:25 ./antigravity-ide
+moneca      9078  0.0  0.2 34088400 58964 pts/0  S+   05:12   0:00 /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote --no-zygote-sandbox
+moneca      9079  0.0  0.0   2796  1904 pts/0    S+   05:12   0:00 /home/moneca/Downloads/AntigravityIDE/chrome-sandbox /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote
+moneca      9080  0.0  0.2 50865600 58596 pts/0  S+   05:12   0:00 /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote
+moneca      9082  0.0  0.0 50865616 14572 pts/0  S+   05:12   0:00 /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote
+moneca      9120  4.1  1.0 34522580 206164 pts/0 Sl+  05:13   0:26 /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote --no-zygote-sandbox
+moneca      9129  0.3  0.4 33919572 87816 pts/0  Sl+  05:13   0:02 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041
+moneca      9162 16.9  2.1 1478457112 418548 pts/0 Rl+ 05:13   1:47 /home/moneca/Downloads/AntigravityIDE/antigravity-ide --type=zygote
+moneca      9255  0.7  1.1 2363684 225692 pts/0  Sl+  05:13   0:05 /home/moneca/Downloads/AntigravityIDE/resources/app/extensions/antigravity/bin/language_server_linux_x64 --csrf_token 6ecbf2a0-92c7-4064-ab81-f161e070a387 --extension_server_port 35309 --extension_server_csrf_token 086b1bd6-932c-4bff-826a-397157b136c1 --app_data_dir antigravity-ide --subclient_type ide --cloud_code_endpoint https://cloudcode-pa.googleapis.com
+moneca      9272  1.8  0.9 1461353316 194780 pts/0 Sl+ 05:13   0:11 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708990997080739
+moneca      9336  0.4  0.6 1461364744 131964 pts/0 Sl+ 05:13   0:02 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708993808206286
+moneca      9492  0.0  0.3 33958404 71576 pts/0  Sl+  05:13   0:00 /proc/self/exe --type=utility --utility-sub-type=audio.mojom.AudioService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708994745248135
+moneca      9616  0.4  0.6 2713576 121360 ?      Sl   05:13   0:02 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {56fcae4c-6fa4-426d-9587-66cab3e066d6} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 28 tab
+moneca      9671  8.0  4.9 8110228 977060 ?      Sl   05:13   0:49 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {b64ed50d-ba14-4b54-8a1f-5f45169bb202} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 29 tab
+root        9702  0.0  0.0      0     0 ?        I    05:13   0:00 [kworker/1:0-i915-unordered]
+root        9792  0.0  0.0      0     0 ?        I    05:14   0:00 [kworker/6:0-i915-unordered]
+moneca      9882  0.2  0.6 1461372824 123552 pts/0 Sl+ 05:15   0:01 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709003178624776
+moneca      9897  1.8  1.2 1461356696 237156 pts/0 Sl+ 05:15   0:09 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --enable-crash-reporter=9bf037fe-e404-4361-9da1-4aba4c4b0211,no_channel --user-data-dir=/home/moneca/.config/Antigravity IDE --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,4252481963038500803,16958429934701844221,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709004115666625
+moneca      9966  0.0  0.0  11476  5848 pts/1    Ss+  05:15   0:00 /usr/bin/bash --init-file /home/moneca/Downloads/AntigravityIDE/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+moneca      9992  0.2  0.7 2295860 155544 pts/0  Sl+  05:15   0:01 /home/moneca/Downloads/AntigravityIDE/resources/app/extensions/antigravity/bin/language_server_linux_x64 --enable_lsp --csrf_token fdf38b9e-d8d8-4439-b9c4-f7a30d5dc757 --extension_server_port 41025 --extension_server_csrf_token 03ddf2f4-14d1-4d2f-8f88-d3653085eb10 --workspace_id file_home_moneca_devops_heros --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --subclient_type ide --app_data_dir antigravity-ide --parent_pipe_path /tmp/server_73b70ee4592c0de3
+root       10041  0.0  0.0      0     0 ?        I    05:15   0:00 [kworker/5:2]
+moneca     10155  0.0  0.3 2588852 73948 ?       Sl   05:16   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {e20e6b4a-aa6a-419c-9706-67124b302438} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 31 tab
+moneca     10162  0.0  0.3 2588852 74888 ?       Sl   05:16   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {1e8e5c79-96e8-4857-8dde-824ba2f37f6f} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 32 tab
+moneca     10422  0.0  0.3 2589664 74016 ?       Sl   05:16   0:00 /snap/firefox/8107/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:43387 -prefMapHandle 1:284126 -jsInitHandle 2:156136 -parentBuildID 20260404010525 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {c7da94c0-10ba-4bde-a849-7708ec346e86} -parentPid 4971 -crashReporter 6 -crashHelper 7 -greomni /snap/firefox/8107/usr/lib/firefox/omni.ja -appomni /snap/firefox/8107/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8107/usr/lib/firefox/browser 33 tab
+root       10529  0.0  0.0      0     0 ?        I<   05:18   0:00 [kworker/u33:3-i915_flip]
+moneca     10585  0.1  0.5 2235944 98640 ?       Ssl  05:20   0:00 /opt/docker-desktop/bin/com.docker.backend
+root       10595  0.0  0.0      0     0 ?        I    05:20   0:00 [kworker/2:1-mm_percpu_wq]
+moneca     10603  3.2  0.7 3851676 151380 ?      Sl   05:20   0:06 /opt/docker-desktop/bin/com.docker.backend services
+moneca     10753  0.0  0.1 1297176 36752 ?       Sl   05:20   0:00 /opt/docker-desktop/bin/com.docker.build --log-no-timestamp
+moneca     10766  0.0  0.0 4927268 2256 ?        Sl   05:20   0:00 /opt/docker-desktop/bin/virtiofsd --socket-path=/home/moneca/.docker/desktop/virtiofs.sock0 --cache=auto --shared-dir=/home --sandbox=none --announce-submounts --xattr --xattrmap=:prefix:all::user.docker.desktop.::bad:all::: --translate-uid squash-guest:0:1000:4294967295 --translate-gid squash-guest:0:1000:4294967295
+moneca     10771  1.2  1.2 1518780436 254076 ?   Sl   05:20   0:02 /opt/docker-desktop/Docker Desktop --reason=open-tray --analytics-enabled=true --disable-hardware-acceleration=false --crash-reporting-sampling-pct=0 --name=dashboard
+moneca     10824 14.1  5.7 7412016 1139460 ?     Sl   05:20   0:29 /usr/bin/qemu-system-x86_64 -accel kvm -cpu host -machine q35 -m 4805 -smp 8 -kernel /opt/docker-desktop/linuxkit/kernel -append init=/initd loglevel=1 root=/dev/vdb rootfstype=erofs ro vsyscall=emulate panic=0 eth0.dhcp eth1.dhcp linuxkit.unified_cgroup_hierarchy=1    virtio_net.disable_csum=1  vpnkit.connect=tcp+connect://192.168.65.1:1999 console=ttyS0 -serial pipe:/tmp/qemu-console2465651041/fifo -netdev socket,id=net1,fd=3 -device virtio-net-pci,netdev=net1,mac=b2:18:30:9c:46:72 -vga none -nographic -monitor none -drive if=none,file=/home/moneca/.docker/desktop/vms/0/data/Docker.raw,format=raw,id=hd0 -device virtio-blk-pci,drive=hd0,serial=dummyserial -drive if=none,file=/opt/docker-desktop/linuxkit/desktop.img,format=raw,id=hd1,readonly=on -device virtio-blk-pci,drive=hd1,serial=dummyserial -object memory-backend-memfd,id=mem,size=4805M,share=on -numa node,memdev=mem -chardev socket,id=char0,path=/home/moneca/.docker/desktop/virtiofs.sock0 -device vhost-user-fs-pci,queue-size=1024,chardev=char0,tag=virtiofs0
+moneca     10843  0.0  0.2 50884532 53756 ?      S    05:20   0:00 /opt/docker-desktop/Docker Desktop --type=zygote --no-zygote-sandbox
+moneca     10844  0.0  0.2 50884520 54012 ?      S    05:20   0:00 /opt/docker-desktop/Docker Desktop --type=zygote
+root       10845  0.0  0.0      0     0 ?        S    05:20   0:00 [kvm-pit/10824]
+moneca     10849  0.0  0.0 50884552 13336 ?      S    05:20   0:00 /opt/docker-desktop/Docker Desktop --type=zygote
+moneca     10946  0.5  0.7 51270880 152396 ?     Sl   05:20   0:01 /opt/docker-desktop/Docker Desktop --type=gpu-process --ozone-platform=wayland --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=5817dbf6-041e-4730-be2e-cafd01290024,no_channel --user-data-dir=/home/moneca/.config/Docker Desktop --gpu-preferences=UAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,16370157207398680857,9576125894047263260,262144 --enable-features=PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=7,i,4936349617754182665,15635649349073802359,4 --trace-process-track-uuid=3190708988185955192
+moneca     10952  0.0  0.4 50704820 80136 ?      Sl   05:20   0:00 /opt/docker-desktop/Docker Desktop --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --render-node-override=/dev/dri/renderD128 --enable-crash-reporter=5817dbf6-041e-4730-be2e-cafd01290024,no_channel --user-data-dir=/home/moneca/.config/Docker Desktop --standard-schemes=app --enable-sandbox --secure-schemes=app --cors-schemes=dd --fetch-schemes=dd --code-cache-schemes=app --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16370157207398680857,9576125894047263260,262144 --enable-features=PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=7,i,4936349617754182665,15635649349073802359,4 --trace-process-track-uuid=3190708989122997041
+moneca     10990  3.2  0.9 1518615624 182788 ?   Sl   05:20   0:06 /opt/docker-desktop/Docker Desktop --type=renderer --enable-crash-reporter=5817dbf6-041e-4730-be2e-cafd01290024,no_channel --user-data-dir=/home/moneca/.config/Docker Desktop --standard-schemes=app --enable-sandbox --secure-schemes=app --cors-schemes=dd --fetch-schemes=dd --code-cache-schemes=app --app-path=/opt/docker-desktop/resources/app.asar --enable-sandbox --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1788390652079661 --launch-time-ticks=2356413199 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,16370157207398680857,9576125894047263260,262144 --enable-features=PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=7,i,4936349617754182665,15635649349073802359,4 --trace-process-track-uuid=3190708990060038890 --desktop-ui-preload-params={"needsBackendErrorsIpcClient":true,"needsPrimaryIpcClient":true}
+moneca     11322  0.0  0.3 1474292 68932 ?       Sl   05:20   0:00 /usr/lib/docker/cli-plugins/docker-agent serve api --listen unix:///home/moneca/.docker/desktop/docker-agent.sock --data-dir /home/moneca/.docker/desktop/cagent --models-gateway https://ai-backend-service.docker.com/proxy/gordon-light?origin=desktop&desktopVersion=4.87.0&gordonTag=v11-light --mcp-oauth-redirect-uri https://ai-backend-service.docker.com/gordon/mcp-oauth/callback https://ai-backend-service.docker.com/proxy/gordon-agent?gordonTag=v11-light&desktopVersion=4.87.0&origin=desktop --pull-interval 60
+moneca     11371  0.0  0.0  10500  7044 ?        S    05:20   0:00 /usr/bin/ssh-agent -D -a /run/user/1000/gcr/.ssh
+moneca     11436  0.3  0.4 1459533476 92132 pts/0 Sl+ 05:22   0:00 /home/moneca/Downloads/AntigravityIDE/antigravity-ide /home/moneca/Downloads/AntigravityIDE/resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=9897
+moneca     11488  0.0  0.0  10140  3856 pts/2    Ss+  05:23   0:00 bash -c cp Submissions/Shell_Scripting/system_info.sh session3-shell-scripting/system_info.sh && chmod +x session3-shell-scripting/system_info.sh && printf "sysinfo_logs\nprocess_report.txt\n" | ./session3-shell-scripting/system_info.sh
+moneca     11492  0.0  0.0  10140  3836 pts/2    S+   05:23   0:00 /bin/bash ./session3-shell-scripting/system_info.sh
+moneca     11501  100  0.0  12780  5132 pts/2    R+   05:23   0:00 ps aux
