@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: final-devops-api, namespace: final-devops}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: final-devops-api}}
+  template:
+    metadata: {labels: {app: final-devops-api}}
+    spec:
+      securityContext: {runAsNonRoot: true, seccompProfile: {type: RuntimeDefault}}
+      containers:
+      - name: api
+        image: ghcr.io/OWNER/final-devops-project:latest
+        ports: [{containerPort: 8080}]
+        envFrom: [{configMapRef: {name: final-devops-config}}, {secretRef: {name: final-devops-secret}}]
+        resources: {requests: {cpu: 100m, memory: 128Mi}, limits: {cpu: 500m, memory: 512Mi}}
+        securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}, readOnlyRootFilesystem: true}
+        volumeMounts: [{name: tmp, mountPath: /tmp}]
+        startupProbe: {httpGet: {path: /health, port: 8080}, failureThreshold: 30, periodSeconds: 2}
+        readinessProbe: {httpGet: {path: /ready, port: 8080}, initialDelaySeconds: 5, periodSeconds: 10}
+        livenessProbe: {httpGet: {path: /health, port: 8080}, initialDelaySeconds: 15, periodSeconds: 20}
+      volumes: [{name: tmp, emptyDir: {}}]

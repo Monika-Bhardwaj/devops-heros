@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: {{ include "final-devops.fullname" . }}}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector: {matchLabels: {app: {{ include "final-devops.fullname" . }}}}
+  template:
+    metadata: {labels: {app: {{ include "final-devops.fullname" . }}}
+    spec:
+      securityContext: {runAsNonRoot: true, seccompProfile: {type: RuntimeDefault}}
+      containers:
+      - name: api
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports: [{containerPort: 8080}]
+        envFrom: [{configMapRef: {name: {{ include "final-devops.fullname" . }}-config}}, {secretRef: {name: {{ include "final-devops.fullname" . }}-secret}}]
+        resources:
+{{ toYaml .Values.resources | indent 10 }}
+        securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}, readOnlyRootFilesystem: true}
+        volumeMounts: [{name: tmp, mountPath: /tmp}]
+        startupProbe: {httpGet: {path: /health, port: 8080}, failureThreshold: 30, periodSeconds: 2}
+        readinessProbe: {httpGet: {path: /ready, port: 8080}, initialDelaySeconds: 5, periodSeconds: 10}
+        livenessProbe: {httpGet: {path: /health, port: 8080}, initialDelaySeconds: 15, periodSeconds: 20}
+      volumes: [{name: tmp, emptyDir: {}}]

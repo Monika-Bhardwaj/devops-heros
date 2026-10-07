@@ -1,0 +1,10 @@
+name: Security
+on: {workflow_dispatch: {}, schedule: [{cron: "0 3 * * 1"}]}
+permissions: {contents: read}
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/dependency-review-action@v4
+      with: {fail-on-severity: high}

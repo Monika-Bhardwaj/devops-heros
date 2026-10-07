@@ -1,0 +1,4 @@
+title = "Final DevOps Project Gitleaks Config"
+[allowlist]
+description = "Example-only learning values"
+regexes = ['change-me']

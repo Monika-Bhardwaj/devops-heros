@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: broken-probe}
+spec:
+  selector: {matchLabels: {app: broken-probe}}
+  template:
+    metadata: {labels: {app: broken-probe}}
+    spec:
+      containers: [{name: api, image: ghcr.io/OWNER/final-devops-project:latest, readinessProbe: {httpGet: {path: /does-not-exist, port: 8080}}}]
