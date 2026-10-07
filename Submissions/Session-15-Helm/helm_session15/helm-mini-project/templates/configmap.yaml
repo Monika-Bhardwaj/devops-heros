@@ -1,0 +1,20 @@
+{{- if .Values.greeting.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "helm-session15-demo.fullname" . }}-html
+  labels:
+    {{- include "helm-session15-demo.labels" . | nindent 4 }}
+data:
+  index.html: |
+    <!doctype html>
+    <html>
+      <head><title>{{ .Values.greeting.title }}</title></head>
+      <body>
+        <h1>{{ .Values.greeting.title }}</h1>
+        <p>{{ .Values.app.message }}</p>
+        <p>Application version: {{ .Values.app.version }}</p>
+        <p>Helm release: {{ .Release.Name }}</p>
+      </body>
+    </html>
+{{- end }}

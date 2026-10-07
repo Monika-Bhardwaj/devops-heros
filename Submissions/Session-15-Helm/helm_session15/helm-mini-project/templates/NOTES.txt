@@ -1,0 +1,9 @@
+1. Check the release:
+   helm status {{ .Release.Name }}
+
+2. Check deployed resources:
+   kubectl get deploy,svc,pods -l app.kubernetes.io/instance={{ .Release.Name }}
+
+3. Test locally with port-forward:
+   kubectl port-forward svc/{{ include "helm-session15-demo.fullname" . }} 8080:80
+   Then open http://localhost:8080

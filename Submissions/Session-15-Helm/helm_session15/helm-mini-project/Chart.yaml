@@ -1,0 +1,6 @@
+apiVersion: v2
+name: helm-session15-demo
+description: Session 15 Helm hands-on mini project demonstrating install, upgrade and rollback.
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

@@ -1,0 +1,27 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: "1.27-alpine"
+
+app:
+  version: "1.0.0"
+  message: "Hello from Helm Session 15 - Version 1"
+
+service:
+  type: ClusterIP
+  port: 80
+
+greeting:
+  enabled: true
+  title: "Helm Session 15 Demo"
+
+resources: {}
+
+podSecurityContext: {}
+securityContext: {}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
